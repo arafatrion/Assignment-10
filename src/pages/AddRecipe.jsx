@@ -1,14 +1,3 @@
-// import React from 'react';
-
-// const AddRecipe = () => {
-//     return (
-//         <div>
-//             <h1>this is an add recipe page </h1>
-//         </div>
-//     );
-// };
-
-// export default AddRecipe;
 
 
 
@@ -51,7 +40,7 @@ export default function AddRecipe() {
         e.preventDefault();
         
         
-        fetch("http://localhost:5000/recipes", {
+        fetch("https://recipe-book-server-topaz-three.vercel.app/recipes", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -7,7 +7,7 @@ const RecipeDetails = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/recipes/${id}`)
+    fetch(`https://recipe-book-server-topaz-three.vercel.app/recipes/${id}`)
       .then(res => res.json())
       .then(data => {
         setRecipe(data);

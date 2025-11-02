@@ -13,7 +13,7 @@ const TopLikedRecipe = () => {
 
     const fetchRecipes = async () => {
         try {
-            const response = await fetch('http://localhost:5000/recipes/top');
+            const response = await fetch('https://recipe-book-server-topaz-three.vercel.app/recipes/top');
             const data = await response.json();
             setRecipes(data);
             setLoading(false);
@@ -25,7 +25,7 @@ const TopLikedRecipe = () => {
 
     const handleLike = async (recipeId, currentLikes) => {
         try {
-            const response = await fetch(`http://localhost:5000/recipes/${recipeId}`, {
+            const response = await fetch(`https://recipe-book-server-topaz-three.vercel.app/recipes/${recipeId}`, {
                 method: "PATCH",
                 headers: {
                     'Content-Type': 'application/json'

@@ -23,7 +23,7 @@ export default function UpdateModal({ recipe, onClose, onUpdate }) {
         ...updatedRecipe
     };
 
-    fetch(`http://localhost:5000/recipes/${recipe._id}`, {
+    fetch(`https://recipe-book-server-topaz-three.vercel.app/recipes/${recipe._id}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json",

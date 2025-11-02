@@ -8,7 +8,7 @@ export default function MyRecipes({ userEmail }) {
     const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/recipes?email=${userEmail}`)
+        fetch(`https://recipe-book-server-topaz-three.vercel.app/recipes?email=${userEmail}`)
             .then(res => res.json())
             .then(data => setRecipes(data));
     }, [userEmail]);
@@ -22,7 +22,7 @@ export default function MyRecipes({ userEmail }) {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/recipes/${id}`, {
+                fetch(`https://recipe-book-server-topaz-three.vercel.app/recipes/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
